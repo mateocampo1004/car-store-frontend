@@ -2,26 +2,24 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppComponent } from './app.component'; 
 import { CarFormComponent } from './components/car-form/car-form.component';
 import { CarListComponent } from './components/car-list/car-list.component';
-import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [
+    AppComponent,
     CarFormComponent,
     CarListComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    NzFormModule,
-    NzInputModule,
-    NzButtonModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: []  // No incluir AppComponent aquí
+  bootstrap: [] // Remove AppComponent from bootstrap array
 })
 export class AppModule { }
