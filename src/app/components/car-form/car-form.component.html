@@ -1,0 +1,18 @@
+<!-- car-form.component.html -->
+
+<form [formGroup]="carForm" (ngSubmit)="submitForm()">
+  <label>
+    Brand:
+    <input type="text" formControlName="brand" nz-input />
+  </label>
+  <label>
+    Model:
+    <input type="text" formControlName="model" nz-input />
+  </label>
+  <label>
+    Year:
+    <input type="text" formControlName="year" nz-input />
+  </label>
+
+  <button nz-button nzType="primary" type="submit">Submit</button>
+</form>

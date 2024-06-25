@@ -1,0 +1,11 @@
+<!-- car-list.component.html -->
+
+<h2>List of Cars</h2>
+
+<ul>
+  <li *ngFor="let car of cars">
+    <p><strong>Brand:</strong> {{ car.brand }}</p>
+    <p><strong>Model:</strong> {{ car.model }}</p>
+    <button (click)="deleteCar(car.id)">Delete</button>
+  </li>
+</ul>
